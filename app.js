@@ -1,4 +1,3 @@
-
 /**
  * Module dependencies.
  */
@@ -8,6 +7,7 @@ var routes = require('./routes');
 var user = require('./routes/user');
 var http = require('http');
 var path = require('path');
+var fs = require('fs');
 
 var app = express();
 
@@ -24,15 +24,33 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // development only
 if ('development' == app.get('env')) {
-  app.use(express.errorHandler());
+    app.use(express.errorHandler());
 }
 
 app.get('/', routes.index);
 app.get('/users', user.list);
-app.get('/api/reviews', function(req, res) {
-    res.send('This is not implemented now');
+app.get('/api/reviews', function (req, res) {
+    var fileName = __dirname + '/data/place_review.json';
+    fs.readFile(fileName, 'utf8', function (err, data) {
+        if (err) {
+            console.log('Error: ' + err);
+            res.send();
+            return;
+        }
+        else {
+            var resData = {};
+            try {
+                resData = JSON.parse(data);
+            }
+            catch (parseErr) {
+                console.log('Parse error: ' + parseErr);
+            }
+            res.json(resData);
+            return;
+        }
+    });
 });
 
-http.createServer(app).listen(app.get('port'), function(){
-  console.log('Express server listening on port ' + app.get('port'));
+http.createServer(app).listen(app.get('port'), function () {
+    console.log('Express server listening on port ' + app.get('port'));
 });
