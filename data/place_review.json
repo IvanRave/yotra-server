@@ -1,5 +1,5 @@
 {
-	"place": {
+	"places": [{
 		"schema": "http://schema.org/Place",
 		"name": "Бухта Ласпи",
 		"description": "Бухта имеет протяженность 12 км и расположена между мысами Сарыч и Айя. Растительность: крымская сосна, земляничник мелкоплодный и можжевельник. Пляж: мелкая галька.Бухта изолирована горным поясом, защищая побережье от северных ветров и холодного Ялтинского течения, поэтому бухта Ласпи и урочище Батилиман самое теплое место Южного берега Крыма (ЮБК), где среднегодовая температура воздуха +15ºС. В этом месте наиболее чистая морская вода на всем побережье Крыма",
@@ -34,5 +34,42 @@
 				"worstRating": 0
 			}
 		}
-	}
+	},
+			{
+				"schema": "http://schema.org/Place",
+				"name": "Бухта Ласпи1231",
+				"description": "Бухта им123еет протяженность 12 км и расположена между мысами Сарыч и Айя. Растительность: крымская сосна, земляничник мелкоплодный и можжевельник. Пляж: мелкая галька.Бухта изолирована горным поясом, защищая побережье от северных ветров и холодного Ялтинского течения, поэтому бухта Ласпи и урочище Батилиман самое теплое место Южного берега Крыма (ЮБК), где среднегодовая температура воздуха +15ºС. В этом месте наиболее чистая морская вода на всем побережье Крыма",
+				"photos": [{
+					"schema": "http://schema.org/ImageObject",
+					"url": "http://virtual-sevastopol.ru/album/laspi/laspi_vid_na_aya1.jpg"
+				}, {
+					"schema": "http://schema.org/ImageObject",
+					"url": "http://commondatastorage.googleapis.com/static.panoramio.com/photos/original/55280534.jpg"
+				}, {
+					"schema": "http://schema.org/ImageObject",
+					"url": "http://eco-turizm.net/wp-content/uploads/2012/12/%D0%B1%D1%83%D1%85%D1%82%D0%B0-%D0%9B%D0%B0%D1%81%D0%BF%D0%B8-%D0%9A%D1%80%D1%8B%D0%BC.jpg"
+				}],
+				"address": {
+					"schema": "http://ruschema.org/PostalAddress",
+					"addressCountry":
+					 {
+					 	"schema": "http://schema.org/addressCountry",
+					 	"name": "Украина"
+					 },
+					"addressLocality": "Севастополь, на територии Севастопольского горсовета",
+					"addressRegion": "Крым"
+				},
+				"review": {
+					"schema": "http://schema.org/Review",
+					"itemReviewed": "Бухта Ласпи1231",
+					"reviewBody": "Fine! I am...",
+					"reviewRating": {
+						"schema": "http://schema.org/Rating",
+						"bestRating": 10,
+						"ratingValue": 7,
+						"worstRating": 0
+					}
+				}
+			}
+	]
 }
