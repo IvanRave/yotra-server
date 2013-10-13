@@ -23,7 +23,7 @@
 			"addressLocality": "Севастополь, на територии Севастопольского горсовета",
 			"addressRegion": "Крым"
 		},
-		"review": {
+		"reviews": [{
 			"schema": "http://schema.org/Review",
 			"itemReviewed": "Бухта Ласпи",
 			"reviewBody": "Fine! I am...",
@@ -33,7 +33,7 @@
 				"ratingValue": 7,
 				"worstRating": 0
 			}
-		}
+		}]
 	},
 			{
 				"schema": "http://schema.org/Place",
@@ -59,7 +59,7 @@
 					"addressLocality": "Севастополь, на територии Севастопольского горсовета",
 					"addressRegion": "Крым"
 				},
-				"review": {
+				"reviews": [{
 					"schema": "http://schema.org/Review",
 					"itemReviewed": "Бухта Ласпи1231",
 					"reviewBody": "Fine! I am...",
@@ -69,7 +69,18 @@
 						"ratingValue": 7,
 						"worstRating": 0
 					}
-				}
+				},
+				{
+					"schema": "http://schema.org/Review",
+					"itemReviewed": "Бухта Ласпи1231",
+					"reviewBody": "Fine! I am...",
+					"reviewRating": {
+						"schema": "http://schema.org/Rating",
+						"bestRating": 10,
+						"ratingValue": 7,
+						"worstRating": 0
+					}
+				}]
 			}
 	]
 }
