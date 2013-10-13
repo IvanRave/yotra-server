@@ -30,6 +30,7 @@ if ('development' == app.get('env')) {
 app.get('/', routes.index);
 app.get('/users', user.list);
 app.get('/api/reviews', function (req, res) {
+    res.header('Access-Control-Allow-Origin', "*")
     var fileName = __dirname + '/data/place_review.json';
     fs.readFile(fileName, 'utf8', function (err, data) {
         if (err) {
