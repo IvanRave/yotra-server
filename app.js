@@ -29,6 +29,13 @@ if ('development' == app.get('env')) {
 
 app.get('/', routes.index);
 app.get('/users', user.list);
+
+app.put('/api/reviews', function (req, res) {
+    res.header('Access-Control-Allow-Origin', "*")
+    res.header('content-type', 'application/json');
+    res.json({ 'put': 'ok' });
+});
+
 app.post('/api/reviews', function (req, res) {
     res.header('Access-Control-Allow-Origin', "*")
     res.header('content-type', 'application/json');
