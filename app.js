@@ -31,20 +31,23 @@ app.get('/', routes.index);
 app.get('/users', user.list);
 
 app.put('/api/reviews', function (req, res) {
-    res.header('Access-Control-Allow-Origin', "*")
-    res.header('content-type', 'application/json');
+    res.header('Access-Control-Allow-Origin', "http://127.0.0.1:9001");
+    res.header('Access-Control-Allow-Credentials', true);
+    res.header('Content-Type', 'application/json');
     res.json({ 'put': 'ok' });
 });
 
 app.post('/api/reviews', function (req, res) {
-    res.header('Access-Control-Allow-Origin', "*")
-    res.header('content-type', 'application/json');
+    res.header('Access-Control-Allow-Origin', "http://127.0.0.1:9001");
+    res.header('Content-Type', 'application/json');
+    res.header('Access-Control-Allow-Credentials', true);
     res.json({ 'req': 'ok' });
 });
 
 app.get('/api/reviews', function (req, res) {
-    res.header('Access-Control-Allow-Origin', "*")
-    res.header('content-type', 'application/json');
+    res.header('Access-Control-Allow-Origin', "http://127.0.0.1:9001");
+    res.header('Access-Control-Allow-Credentials', true);
+    res.header('Content-Type', 'application/json');
     var fileName = __dirname + '/data/place_review.json';
     fs.readFile(fileName, 'utf8', function (err, data) {
         if (err) {
